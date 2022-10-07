@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Nombre:	quirinux-libre
+# Autor:	Charlie Martínez® <cmartinez@quirinux.org>
+# Licencia:	https://www.gnu.org/licenses/gpl-3.0.txt
+# Descripción:	Elimina todos los componentes privativos que vienen preinstalados en Quirinux.
+# Versión:	1.00
+
+
+# ELIMINA LOS COMPONENTES PRIVATIVOS
+
+rm /etc/apt/sources.list
+cp /opt/libre/sources.list /etc/apt/sources.list
+
+sudo apt-get update -y
+
+for paquetes_privativos in dahdi-firmware-nonfree firmware-ipw2x00 firmware-ivtv rar unace-nonfree b43-fwcutter bluez-firmware firmware-amd-graphics firmware-brcm80211 unrar amd64-microcode atmel-firmware dahdi-firmware-nonfree firmware-adi firmware-amd-grapichs firmware-atheros firmware-bnx2 firmware-bnx2x firmware-brmcm80211 firmware-cavium firmware-intel-sound firmware-intelwimax firmware-ipw2x00 firmware-ivtv firmware-iwlwifi firmware-libertas firmware-linux firmware-linux-nonfree firmware-misc-nonfree firmware-myricom firmware-netronome firmware-netxen firmware-qcom-media firmware-qlogic firmware-ralink firmware-realtek firmware-samsung firmware-siano firmware-ti-connectivity firmware-zd1211 intel-microcode midisport-firmware p7zip-rar rar unace-nonfree unrar  w64codecs b43-fwcutter firmware-b43-installer firmware-b4legacy-installer iucode-tool chimiboga firmware-amd-graphics firmware-atheros firmware-bnx2 firmware-bnx2x firmware-brcm80211 firmware-intelwimax firmware-iwlwifi firmware-libertas firmware-linux-nonfree firmware-misc-nonfree firmware-myricom firmware-netxen firmware-qlogic firmware-ralink firmware-realtek firmware-ti-connectivity firmware-zd1211; do sudo apt-get remove --purge -y $paquetes_privativos; done
+
+for paquetes_privativos2 in amd64-microcode atmel-firmware bluez-firmware dahdi-firmware-nonfree firmware-amd-graphics firmware-atheros firmware-bnx2 firmware-bnx2x firmware-brcm80211 firmware-cavium firmware-intel-sound firmware-intelwimax firmware-ipw2x00 firmware-ivtv firmware-iwlwifi firmware-libertas firmware-linux firmware-linux-nonfree firmware-misc-nonfree firmware-myricom firmware-netronome firmware-netxen firmware-qcom-media firmware-qcom-soc firmware-qlogic firmware-realtek firmware-samsung firmware-siano firmware-sof-signed firmware-ti-connectivity firmware-zd1211 intel-microcode midisport-firmware; do sudo apt-get remove --purge -y $paquetes_privativos2; done
+
+sudo apt-get autoremove --purge
+
+rm /etc/apt/sources.list
+cp /opt/libre/sources.list /etc/apt/sources.list
+
+sudo apt-get install vrms
+
+
+# REPORTE FINAL 
+
+clear
+vrms
+cat /etc/apt/sources.list
+
+

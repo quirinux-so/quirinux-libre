@@ -1,0 +1,5 @@
+78d92e762e58d08244ad70b48a04430f usr/local/bin/quirinux-libre
+e37fb4dafb429cda04779bfba2b11d7f usr/local/bin/quirinux-notanlibre
+97b69ea7287663bd5e294d380ae14408 opt/libre/sources.list
+ed2564b7891f1e69698285f6b09634ca opt/notanlibre/sources.list
+d41d8cd98f00b204e9800998ecf8427e  -

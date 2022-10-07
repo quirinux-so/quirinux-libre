@@ -1,0 +1,15 @@
+Package: quirinux-libre
+Version: 1.0.5
+Installed-Size: 204
+Maintainer: Charlie Martinez <cmartinez@quirinux.org>
+Section: graphics
+Homepage: https://www.quirinux.org
+Architecture: all
+Priority: optional
+Depends: zenity, vrms
+Description: quirinux-libre
+ Autor: Charlie Martinez
+ .
+ Instalar o desinstalar los componentes privativos de Quirinux.
+
+
