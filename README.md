@@ -1,6 +1,8 @@
 # quirinux-libre
 
-Comandos para eliminar o reinstalar los componentes privativos que vienen por defecto incluídos en Quirinux (controladores de hardware).
+Scripts eliminar o reinstalar los componentes privativos que vienen por defecto incluídos en Quirinux y en las ISO de Debian Bullseye non-free. <br>
 
-quirinux-libre <br>
-quirinux-notanlibre
+## Comandos:
+
+libre <br>
+notanlibre
